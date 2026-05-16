@@ -1,58 +1,42 @@
 export const udanBooks = {
   1: {
-    title: "Udan 1 – Introduction to Law",
+    title: "Udan 1",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%201.pdf",
-    description:
-      "This book introduces basic legal concepts, legal systems, and the foundation of law for beginners."
+    pdf: "/assets/books/Udan.pdf"
   },
   2: {
-    title: "Udan 2 – Constitutional Values",
+    title: "Udan 2",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%202.pdf",
-    description:
-      "Focuses on the Indian Constitution, fundamental rights, duties, and democratic principles."
+    pdf: "/assets/books/Udan.pdf"
   },
   3: {
-    title: "Udan 3 – Legal Awareness & Society",
+    title: "Udan 3",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%203.pdf",
-    description:
-      "Promotes legal literacy, social justice, and awareness of laws affecting citizens."
+    pdf: "/assets/books/Udan.pdf"
   },
   4: {
-    title: "Udan 4 – Advocacy Skills",
+    title: "Udan 4",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%204.pdf",
-    description:
-      "Develops advocacy skills, court manners, drafting, and professional ethics."
+    pdf: "/assets/books/Udan.pdf"
   },
   5: {
-    title: "Udan 5 – Judicial System",
+    title: "Udan 5",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%205.pdf",
-    description:
-      "Explains structure and functioning of courts and judicial institutions in India."
+    pdf: "/assets/books/Udan.pdf"
   },
   6: {
-    title: "Udan 6 – Legal Drafting",
+    title: "Udan 6",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%206.pdf",
-    description:
-      "Covers drafting of notices, pleadings, applications, and legal documents."
+    pdf: "/assets/books/Udan.pdf"
   },
   7: {
-    title: "Udan 7 – Moot Court Practice",
+    title: "Udan 7",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%207.pdf",
-    description:
-      "Practical training through moot courts, mock trials, and oral arguments."
+    pdf: "/assets/books/Udan.pdf"
   },
   8: {
-    title: "Udan 8 – Professional Ethics",
+    title: "Udan 8",
     cover: "/assets/books/udan.png",
-    pdf: "/assets/books/Udan%208.pdf",
-    description:
-      "Focuses on ethics, professionalism, leadership, and career readiness in law."
+    pdf: "/assets/books/Udan.pdf"
   }
 };

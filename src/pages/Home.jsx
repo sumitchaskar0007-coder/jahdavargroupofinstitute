@@ -313,9 +313,12 @@ export default function Home() {
                     Check Eligibility
                   </button>
 
-                  <button className="flex-1 bg-yellow-500 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-yellow-600 transition-all duration-300">
+                  <Link
+                    to="/contact"
+                    className="flex-1 bg-yellow-500 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-yellow-600 transition-all duration-300 text-center"
+                  >
                     Apply Now
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

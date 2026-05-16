@@ -7,6 +7,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import FloatingEnquiryButton from './components/FloatingEnquiryButton.jsx';
 import EnquiryModal from './components/EnquiryModal.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 // Public pages
 import Home from './pages/Home.jsx';
@@ -25,6 +26,7 @@ import Contact from './pages/Contact.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Facilities from './pages/Facilities.jsx';
 import UdanBook from "./pages/UdanBook.jsx";
+import Udan from "./pages/Udan.jsx";
 import Grievance from './pages/Grievance.jsx';
 import Feedback from './pages/Feedback.jsx';
 import JadhavarGroup from './pages/JadhavarGroup.jsx';
@@ -33,6 +35,9 @@ import President from './pages/President.jsx';
 import Programmes from './pages/Programmes.jsx';
 import Research from './pages/Research.jsx';
 import LifeCampus from './pages/LifeCampus.jsx';
+import Privacy from './pages/Privacy.jsx';
+import Terms from './pages/Terms.jsx';
+import Disclaimer from './pages/Disclaimer.jsx';
 
 // Admin pages
 import AdminLogin from './pages/admin/AdminLogin.jsx';
@@ -57,6 +62,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Toaster 
         position="top-right"
         toastOptions={{
@@ -111,8 +117,12 @@ function App() {
             <Route path="/grievance" element={<Grievance />} />
             <Route path="/life-campus" element={<LifeCampus />} />
             <Route path="/facilities" element={<Facilities />} />
+            <Route path="/udan" element={<Udan />} />
             <Route path="/udan/:id" element={<UdanBook />} />
             <Route path="/feedback" element={<Feedback />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
 
             {/* ---------------- ADMIN ROUTES ---------------- */}
             <Route path="/admin/login" element={<AdminLogin />} />

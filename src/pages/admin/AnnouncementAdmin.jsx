@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import {
   getAnnouncements,
+  getResponseList,
   createAnnouncement,
   updateAnnouncement,
   deleteAnnouncement
@@ -26,8 +27,9 @@ const AnnouncementAdmin = () => {
   const fetchAnnouncements = async () => {
     try {
       const response = await getAnnouncements();
-      setAnnouncements(response.data);
+      setAnnouncements(getResponseList(response, 'announcements'));
     } catch (error) {
+      setAnnouncements([]);
       toast.error('Failed to fetch announcements');
     } finally {
       setLoading(false);

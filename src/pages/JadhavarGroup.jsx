@@ -14,7 +14,7 @@ export default function JadhavarGroup() {
     },
     {
       name: 'Jadhavar College of Law Pune',
-      url: 'https://www.jadhavarcollegeoflaw3.com',
+      url: 'https://www.jadhavarcollegeoflaw.com/',
       status: 'Done',
     },
     {
@@ -24,7 +24,7 @@ export default function JadhavarGroup() {
     },
     {
       name: 'Dr. Sudhakarrao Jadhavar Arts, Commerce and Science College Pune',
-      url: 'https://www.jadhavarjuniorcollege.com',
+      url: 'https://www.jadhavarjrcollege.com/',
       status: 'Done',
     },
     {
@@ -40,7 +40,7 @@ export default function JadhavarGroup() {
       status: 'Old / see note',
     },
     { name: 'Jadhavar English Medium School and Junior College Pune', url: 'https://www.jadhavarenglishschool.com', status: 'Done' },
-    { name: 'Jadhavar International School and Junior College Pune', url: 'https://www.jadhavarcbse.com', status: 'Done' },
+    { name: 'Jadhavar International School and Junior College Pune', url: 'https://jadhavarinternationalschool.com/', status: 'Done' },
     {
       name: 'Dr. Sudhakarrao Jadhavar Primary and Secondary School Pune (old)',
       url: 'https://www.jadhavarsemienglish.in',

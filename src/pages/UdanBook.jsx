@@ -1,8 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Download, BookOpen } from "lucide-react";
+import { ArrowLeft, Download, FileText } from "lucide-react";
 import { udanBooks } from "../data/udanBooks";
 
 export default function UdanBook() {
@@ -11,66 +11,72 @@ export default function UdanBook() {
 
   if (!book) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-xl font-semibold">Book not found</p>
+      <div className="container-responsive flex min-h-[60vh] items-center justify-center py-16 text-center">
+        <div>
+          <h1 className="text-2xl font-bold text-[#0a1e3c]">Book not found</h1>
+          <Link to="/udan" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-800 hover:underline">
+            <ArrowLeft size={16} />
+            Back to Udan Program
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
     <>
-      {/* SEO */}
       <Helmet>
-        <title>{book.title} | Jadhavar College of Law</title>
-        <meta
-          name="description"
-          content={`Download ${book.title} book from Udan Program at Jadhavar College of Law.`}
-        />
+        <title>{book.title} | Udan Program</title>
+        <meta name="description" content="Download the Udan PDF." />
       </Helmet>
 
-      <section className="min-h-screen bg-gray-50 py-16">
-        <div className="max-w-5xl mx-auto px-6">
+      <main className="bg-gray-50">
+        <section className="container-responsive py-12">
+          <Link to="/udan" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-800 hover:underline">
+            <ArrowLeft size={16} />
+            Back to Udan Program
+          </Link>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl shadow-lg p-8 md:p-12 grid md:grid-cols-2 gap-10"
+            transition={{ duration: 0.4 }}
+            className="mx-auto mt-8 grid max-w-5xl gap-8 rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:grid-cols-[280px_1fr] md:p-10"
           >
-            {/* Book Image */}
-            <div className="flex justify-center">
-              <img
-                src={book.cover}
-                alt={book.title}
-                className="w-64 rounded-lg shadow-md"
-              />
-            </div>
+            <img
+              src={book.cover}
+              alt={book.title}
+              className="mx-auto w-full max-w-[240px] rounded-md object-contain"
+            />
 
-            {/* Book Info */}
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <BookOpen className="text-blue-700" />
-                {book.title}
-              </h1>
+            <div className="flex flex-col justify-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-yellow-600">Udan Book Series</p>
+              <h1 className="mt-3 text-4xl font-bold text-[#0a1e3c]">{book.title}</h1>
+              <p className="mt-4 text-gray-700">Use the buttons below to download or open the PDF.</p>
 
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {book.description}
-              </p>
-
-              <a
-                href={book.pdf}
-                download
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-900 transition"
-              >
-                <Download />
-                Download PDF
-              </a>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a
+                  href={book.pdf}
+                  download={`${book.title}.pdf`}
+                  className="inline-flex items-center gap-2 rounded-md bg-[#0a1e3c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#12345f]"
+                >
+                  <Download size={18} />
+                  Download PDF
+                </a>
+                <a
+                  href={book.pdf}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-2 rounded-md border border-[#0a1e3c] px-5 py-3 text-sm font-semibold text-[#0a1e3c] transition hover:bg-blue-50"
+                >
+                  <FileText size={18} />
+                  Open PDF
+                </a>
+              </div>
             </div>
           </motion.div>
-
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

@@ -36,11 +36,11 @@ export default function Header() {
       colleges: [
         {
           name: "Jadhavar College of Law Pune",
-          url: "https://www.jadhavarcollegeoflaw3.com",
+          url: "https://www.jadhavarcollegeoflaw.com/",
         },
         {
           name: "Adv Shardulrao Sudhakarrao Jadhavar College of Law Pune",
-          url: "https://www.shardulraojadhavarcollegeoflaw5.com",
+          url: "https://www.shardulraojadhavarcollegeoflaw.com",
         },
       ],
     },
@@ -49,7 +49,7 @@ export default function Header() {
       colleges: [
         {
           name: "Dr. Sudhakarrao Jadhavar Arts, Commerce and Science College Pune",
-          url: "https://www.jadhavarjuniorcollege.com",
+          url: "https://www.jadhavarjrcollege.com/",
         },
       ],
     },
@@ -79,7 +79,7 @@ export default function Header() {
         },
         {
           name: "Jadhavar International School and Junior College Pune",
-          url: "https://www.jadhavarcbse.com",
+          url: "https://jadhavarinternationalschool.com/",
         },
         {
           name: "Paradise English Medium School and Junior College Pune",
@@ -151,19 +151,19 @@ export default function Header() {
   }));
 
   // EXACT main navigation - ADMISSIONS now has NO dropdown
- // UPDATED MAIN NAVIGATION
-const mainMenu = [
-  { name: "HOME", path: "/", hasDropdown: false },
-  { name: "ABOUT US", path: "/about", hasDropdown: true },
-  { name: "ACADEMICS", path: "/academics", hasDropdown: true },
-  { name: "PROGRAMS", path: "/programs", hasDropdown: false },
-  { name: "ADMISSIONS", path: "/admissions", hasDropdown: false },
-  { name: "RESEARCH", path: "/research", hasDropdown: false },
-  { name: "BLOG", path: "/blog", hasDropdown: false },
-  { name: "CAREER", path: "/careers", hasDropdown: false },
-  { name: "NOTICE", path: "/notice", hasDropdown: false },
-  { name: "GALLERY", path: "/gallery", hasDropdown: false },
-];
+  // UPDATED MAIN NAVIGATION
+  const mainMenu = [
+    { name: "HOME", path: "/", hasDropdown: false },
+    { name: "ABOUT US", path: "/about", hasDropdown: true },
+    { name: "ACADEMICS", path: "/academics", hasDropdown: true },
+    { name: "PROGRAMS", path: "/programs", hasDropdown: false },
+    { name: "ADMISSIONS", path: "/admissions", hasDropdown: false },
+    { name: "RESEARCH", path: "/research", hasDropdown: false },
+    { name: "BLOG", path: "/blog", hasDropdown: false },
+    { name: "CAREER", path: "/careers", hasDropdown: false },
+    { name: "NOTICE", path: "/notice", hasDropdown: false },
+    { name: "GALLERY", path: "/gallery", hasDropdown: false },
+  ];
 
   // ✅ Action Buttons - Professional Blue Theme
   const actionButtons = [
@@ -246,9 +246,8 @@ const mainMenu = [
                           {btn.label}
                           <ChevronDown
                             size={14}
-                            className={`transition ${
-                              activeMegaMenu === "UDAN" ? "rotate-180" : ""
-                            }`}
+                            className={`transition ${activeMegaMenu === "UDAN" ? "rotate-180" : ""
+                              }`}
                           />
                         </Link>
 
@@ -302,7 +301,7 @@ const mainMenu = [
                   <Facebook size={16} />
                 </a>
                 <a
-                  href="https://www.instagram.com/jadhavar_group_of_inst"
+                  href="https://www.instagram.com/jadhavar_group_of_institute/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-500 transition"
@@ -373,17 +372,15 @@ const mainMenu = [
                       <NavLink
                         to={item.path}
                         className={({ isActive }) =>
-                          `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide flex items-center gap-1 ${
-                            isActive ? "bg-[#1e3a5f]" : ""
+                          `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide flex items-center gap-1 ${isActive ? "bg-[#1e3a5f]" : ""
                           }`
                         }
                       >
                         {item.name}
                         <ChevronDown
                           size={14}
-                          className={`transition ${
-                            activeMegaMenu === "ABOUT_US" ? "rotate-180" : ""
-                          }`}
+                          className={`transition ${activeMegaMenu === "ABOUT_US" ? "rotate-180" : ""
+                            }`}
                         />
                       </NavLink>
 
@@ -431,17 +428,15 @@ const mainMenu = [
                       <NavLink
                         to={item.path}
                         className={({ isActive }) =>
-                          `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide flex items-center gap-1 ${
-                            isActive ? "bg-[#1e3a5f]" : ""
+                          `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide flex items-center gap-1 ${isActive ? "bg-[#1e3a5f]" : ""
                           }`
                         }
                       >
                         {item.name}
                         <ChevronDown
                           size={14}
-                          className={`transition ${
-                            activeMegaMenu === "ACADEMICS" ? "rotate-180" : ""
-                          }`}
+                          className={`transition ${activeMegaMenu === "ACADEMICS" ? "rotate-180" : ""
+                            }`}
                         />
                       </NavLink>
 
@@ -488,8 +483,7 @@ const mainMenu = [
                       key={item.name}
                       to={item.path}
                       className={({ isActive }) =>
-                        `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide ${
-                          isActive ? "bg-[#1e3a5f]" : ""
+                        `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide ${isActive ? "bg-[#1e3a5f]" : ""
                         }`
                       }
                     >
@@ -504,8 +498,7 @@ const mainMenu = [
                     key={item.name}
                     to={item.path}
                     className={({ isActive }) =>
-                      `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide ${
-                        isActive ? "bg-[#1e3a5f]" : ""
+                      `px-5 lg:px-7 py-3.5 text-xs lg:text-sm font-semibold text-white border-r border-[#1e3a5f] hover:bg-[#1e3a5f] transition tracking-wide ${isActive ? "bg-[#1e3a5f]" : ""
                       }`
                     }
                   >
@@ -543,12 +536,12 @@ const mainMenu = [
                 className="w-full px-3 sm:px-4 py-3 flex items-center justify-between text-white hover:bg-[#2a4a6e] transition"
               >
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-wider">UDAN Book Series</span>
-                <ChevronDown 
-                  size={16} 
+                <ChevronDown
+                  size={16}
                   className={`transition-transform duration-300 ${mobileAccordion.udan ? 'rotate-180' : ''}`}
                 />
               </button>
-              
+
               {mobileAccordion.udan && (
                 <div className="px-3 sm:px-4 pb-4">
                   <div className="grid grid-cols-2 gap-2">
@@ -572,7 +565,7 @@ const mainMenu = [
               <p className="text-gray-400 text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2">
                 Main Menu
               </p>
-              
+
               {mainMenu.map((item) => (
                 <div key={item.name} className="bg-[#1e3a5f] rounded-lg overflow-hidden">
                   {item.hasDropdown ? (
@@ -582,11 +575,10 @@ const mainMenu = [
                         className="w-full px-3 sm:px-4 py-3 flex items-center justify-between text-white hover:bg-[#2a4a6e] transition"
                       >
                         <span className="text-xs sm:text-sm font-bold">{item.name}</span>
-                        <ChevronDown 
-                          size={16} 
-                          className={`transition-transform duration-300 ${
-                            mobileAccordion[item.name === "ABOUT US" ? 'about' : 'academics'] ? 'rotate-180' : ''
-                          }`}
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-300 ${mobileAccordion[item.name === "ABOUT US" ? 'about' : 'academics'] ? 'rotate-180' : ''
+                            }`}
                         />
                       </button>
 
@@ -649,8 +641,7 @@ const mainMenu = [
                       to={item.path}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `block px-3 sm:px-4 py-3 text-xs sm:text-sm font-bold text-white hover:bg-[#2a4a6e] transition ${
-                          isActive ? "bg-[#2a4a6e] border-l-4 border-yellow-500" : ""
+                        `block px-3 sm:px-4 py-3 text-xs sm:text-sm font-bold text-white hover:bg-[#2a4a6e] transition ${isActive ? "bg-[#2a4a6e] border-l-4 border-yellow-500" : ""
                         }`
                       }
                     >
@@ -672,7 +663,7 @@ const mainMenu = [
                 <Facebook size={16} sm:size={18} />
               </a>
               <a
-                href="https://www.instagram.com/jadhavar_group_of_inst"
+                href="https://www.instagram.com/jadhavar_group_of_institute/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-yellow-500 transition"

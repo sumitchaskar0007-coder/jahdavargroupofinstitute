@@ -78,8 +78,8 @@ export default function Secretary() {
               <GraduationCap className="text-blue-600 mb-3" />
               <h3 className="font-semibold mb-2">Qualifications</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                M.B.A., P.G.D.H.R.M., B.Com., D.H.R.&L., D.C.L., D.CP.L., 
-                APCL, DIPL, CMED, D.LL&L.W., L.L.M.
+                M.B.A., P.G.D.H.R.M., M.Com., D.H.R.&L., D.C.L., D.CP.L.,
+                APCL, CMED, D.LL&L.W., L.L.M.
               </p>
             </div>
 

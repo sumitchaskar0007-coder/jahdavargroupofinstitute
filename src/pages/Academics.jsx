@@ -7,7 +7,7 @@ const institutesData = [
     items: [
       {
         name: "Jadhavar International School (Play Group to 8th – CBSE Board)",
-        url: "https://www.jadhavarcbse.com",
+        url: "https://jadhavarinternationalschool.com/",
       },
       {
         name: "Prin. Dr. Sudhakarrao Jadhavar Primary & Secondary High School (Semi English 1st to 10th)",
@@ -82,7 +82,7 @@ const institutesData = [
       },
       {
         name: "Prin. Dr. Sudhakarrao Jadhavar Arts, Comm. & Science College (B.A, B.Com, BBA, BCA, B.Sc – AI/ML, Data Science etc.)",
-        url: "https://www.jadhavarjuniorcollege.com",
+        url: "https://www.jadhavarjrcollege.com/",
       },
       {
         name: "Yeshwantrao Chavan Maharashtra Open University Center",
@@ -94,7 +94,7 @@ const institutesData = [
       },
       {
         name: "Jadhavar College of Law, Narhe, Pune",
-        url: "https://www.jadhavarcollegeoflaw3.com",
+        url: "https://www.jadhavarcollegeoflaw.com/",
       },
       {
         name: "Adv. Shardulrao Sudhakarrao Jadhavar College of Law, Narhe, Pune",
@@ -115,7 +115,7 @@ const institutesData = [
       },
       {
         name: "Prin. Dr. Sudhakarrao Jadhavar Arts, Comm. & Science College (M.A, M.Com, M.Sc – Computer Application, Computer Science)",
-        url: "https://www.jadhavarjuniorcollege.com",
+        url: "https://www.jadhavarjrcollege.com/",
       },
       {
         name: "Yeshwantrao Chavan Maharashtra Open University Center",

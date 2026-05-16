@@ -120,7 +120,7 @@ export default function Footer() {
             </li>
             <li>
               <a 
-                href="https://www.jadhavarcollegeoflaw3.com" 
+                href="https://www.jadhavarcollegeoflaw.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-yellow-500 transition flex items-center gap-2"
@@ -140,7 +140,7 @@ export default function Footer() {
             </li>
             <li>
               <a 
-                href="https://www.jadhavarcbse.com" 
+                href="https://jadhavarinternationalschool.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-yellow-500 transition flex items-center gap-2"
@@ -150,7 +150,7 @@ export default function Footer() {
             </li>
             <li>
               <a 
-                href="https://www.jadhavarjuniorcollege.com" 
+                href="https://www.jadhavarjrcollege.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-yellow-500 transition flex items-center gap-2"
@@ -185,7 +185,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.instagram.com/jadhavar_group_of_inst"
+              href="https://www.instagram.com/jadhavar_group_of_institute/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 rounded-full bg-[#1e3a5f] hover:bg-yellow-500 flex items-center justify-center transition transform hover:scale-110"

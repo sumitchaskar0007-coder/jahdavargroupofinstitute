@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function Hero({ onApply, onProspectus, onEnquiry }) {
+export default function Hero({ onProspectus, onEnquiry }) {
 	return (
 		<section className="relative overflow-hidden">
 			<Helmet>
@@ -40,12 +41,12 @@ export default function Hero({ onApply, onProspectus, onEnquiry }) {
 					</p>
 
 					<div className="mt-6 flex flex-wrap gap-3">
-						<button
-							onClick={onApply}
+						<Link
+							to="/contact"
 							className="px-5 py-3 rounded-xl bg-primary text-white hover:opacity-90"
 						>
 							Apply Now
-						</button>
+						</Link>
 
 						<button
 							onClick={onProspectus}

@@ -1,10 +1,10 @@
 {
-  "name": "jadhavar-law-site",
+  "name": "jadhavar-group-of-institutes",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 127.0.0.1 --port 5174 --strictPort",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "echo \"Add your preferred linter (eslint) if needed\""

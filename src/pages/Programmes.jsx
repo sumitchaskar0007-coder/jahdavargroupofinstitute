@@ -27,7 +27,7 @@ export default function Programmes() {
           duration: '5 Years',
           intake: 240,
           colleges: 'Jadhavar College of Law',
-          url: 'https://www.jadhavarcollegeoflaw3.com'
+          url: 'https://www.jadhavarcollegeoflaw.com/'
         },
         {
           name: 'LL.B (3 Years)',
@@ -41,7 +41,7 @@ export default function Programmes() {
           duration: '1-2 Years',
           intake: 80,
           colleges: 'Jadhavar College of Law',
-          url: 'https://www.jadhavarcollegeoflaw3.com'
+          url: 'https://www.jadhavarcollegeoflaw.com/'
         }
       ]
     },
@@ -186,7 +186,7 @@ export default function Programmes() {
             <h2 className="text-2xl font-bold mb-3">Ready to Apply?</h2>
             <p className="text-gray-300 mb-6">Explore our programs and take the next step in your career.</p>
             <a
-              href="/admissions"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-2.5 rounded font-semibold hover:bg-yellow-500 transition"
             >
               Apply Now <ArrowRight size={16} />
@@ -197,5 +197,3 @@ export default function Programmes() {
     </>
   )
 }
-
-

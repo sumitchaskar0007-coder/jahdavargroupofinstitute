@@ -2,151 +2,77 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  BookOpen,
-  Scale,
-  Users,
-  Briefcase,
-  Landmark,
-  FileText,
-  Gavel,
-  GraduationCap
-} from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+import { udanBooks } from "../data/udanBooks";
 
-const udanPrograms = [
-  {
-    id: 1,
-    title: "Udan 1",
-    icon: <BookOpen />,
-    description:
-      "Legal awareness and foundational understanding of law for students."
-  },
-  {
-    id: 2,
-    title: "Udan 2",
-    icon: <Scale />,
-    description:
-      "Introduction to constitutional values, justice, and legal rights."
-  },
-  {
-    id: 3,
-    title: "Udan 3",
-    icon: <Users />,
-    description:
-      "Community engagement and legal literacy programs."
-  },
-  {
-    id: 4,
-    title: "Udan 4",
-    icon: <Briefcase />,
-    description:
-      "Professional orientation towards advocacy and legal careers."
-  },
-  {
-    id: 5,
-    title: "Udan 5",
-    icon: <Landmark />,
-    description:
-      "Exposure to courts, legal institutions, and judicial processes."
-  },
-  {
-    id: 6,
-    title: "Udan 6",
-    icon: <FileText />,
-    description:
-      "Legal drafting, documentation, and research skills development."
-  },
-  {
-    id: 7,
-    title: "Udan 7",
-    icon: <Gavel />,
-    description:
-      "Practical training through moot courts and mock trials."
-  },
-  {
-    id: 8,
-    title: "Udan 8",
-    icon: <GraduationCap />,
-    description:
-      "Leadership, ethics, and preparation for the legal profession."
-  }
-];
+const books = Object.entries(udanBooks).map(([id, book]) => ({
+  id,
+  ...book
+}));
 
 export default function Udan() {
   return (
     <>
-      {/* ================= SEO ================= */}
       <Helmet>
-        <title>
-          Udan Program | Jadhavar College of Law Pune
-        </title>
+        <title>Udan Program | Jadhavar Group of Institutions</title>
         <meta
           name="description"
-          content="Udan Program at Jadhavar College of Law Pune includes Udan 1 to Udan 8 focusing on legal awareness, advocacy skills, moot court training, and professional development."
-        />
-        <meta
-          name="keywords"
-          content="Udan Program Law College, Legal Awareness Program, Moot Court Training, Law College Activities Pune"
+          content="Download Udan PDF books from Jadhavar Group of Institutions."
         />
       </Helmet>
 
-      {/* ================= PAGE CONTENT ================= */}
-      <section className="min-h-screen bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* HEADER */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-14"
-          >
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">
-              Udan Program
-            </h1>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              The Udan Program at Jadhavar College of Law is a structured
-              initiative designed to enhance legal awareness, professional
-              skills, ethical values, and practical exposure for law students.
+      <main className="bg-gray-50">
+        <section className="border-b border-gray-200 bg-white">
+          <div className="container-responsive py-12 text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-yellow-600">Udan Book Series</p>
+            <h1 className="mt-3 text-4xl font-bold text-[#0a1e3c] sm:text-5xl">Udan Program</h1>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-700">
+              View or download the Udan PDF.
             </p>
-          </motion.div>
+          </div>
+        </section>
 
-          {/* UDAN CARDS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {udanPrograms.map((udan, index) => (
-              <motion.div
-                key={udan.id}
-                initial={{ opacity: 0, y: 30 }}
+        <section className="container-responsive py-12">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {books.map((book, index) => (
+              <motion.article
+                key={book.id}
+                initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
+                transition={{ duration: 0.35, delay: index * 0.04 }}
+                className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                <div className="flex items-center gap-3 mb-4 text-blue-700">
-                  <div className="p-3 rounded-xl bg-blue-50">
-                    {udan.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold">
-                    {udan.title}
-                  </h3>
+                <img
+                  src={book.cover}
+                  alt={book.title}
+                  className="mx-auto h-52 w-auto rounded-md object-contain"
+                />
+
+                <h2 className="mt-5 text-center text-xl font-bold text-[#0a1e3c]">{book.title}</h2>
+
+                <div className="mt-5 flex items-center gap-3">
+                  <Link
+                    to={`/udan/${book.id}`}
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-md bg-[#0a1e3c] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#12345f]"
+                  >
+                    View
+                    <ArrowRight size={16} />
+                  </Link>
+                  <a
+                    href={book.pdf}
+                    download={`${book.title}.pdf`}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 text-[#0a1e3c] transition hover:border-yellow-500 hover:bg-yellow-50"
+                    aria-label={`Download ${book.title}`}
+                  >
+                    <Download size={18} />
+                  </a>
                 </div>
-
-                <p className="text-gray-600 text-sm mb-4">
-                  {udan.description}
-                </p>
-
-                <Link
-                  to={`/udan/${udan.id}`}
-                  className="text-sm font-semibold text-blue-700 hover:underline"
-                >
-                  View Details →
-                </Link>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { toast } from 'react-hot-toast';
-import { getAnnouncements } from '../api';
+import { getAnnouncements, getResponseList } from '../api';
 
 const Announcement = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -40,8 +40,9 @@ const Announcement = () => {
   const fetchAnnouncements = async () => {
     try {
       const response = await getAnnouncements();
-      setAnnouncements(response.data);
+      setAnnouncements(getResponseList(response, 'announcements'));
     } catch (error) {
+      setAnnouncements([]);
       toast.error('Failed to load announcements');
     } finally {
       setLoading(false);
@@ -101,6 +102,8 @@ const Announcement = () => {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
+    if (Number.isNaN(date.getTime())) return '';
+
     const now = new Date();
     const diffTime = Math.abs(now - date);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

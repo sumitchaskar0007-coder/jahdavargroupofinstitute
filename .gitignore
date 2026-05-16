@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Build outputs
+dist/
 
 
 # Environment variables
@@ -37,7 +37,7 @@ Thumbs.db
 
 # Uploads
 uploads/
-*.pdf
+public/assets/books/Udan[0-9].pdf
 *.zip
 
 # Testing

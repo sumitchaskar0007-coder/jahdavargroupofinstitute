@@ -52,6 +52,18 @@ export const createAnnouncement = (data) => api.post('/announcements', data);
 export const updateAnnouncement = (id, data) => api.put(`/announcements/${id}`, data);
 export const deleteAnnouncement = (id) => api.delete(`/announcements/${id}`);
 
+export const getResponseList = (response, key) => {
+  const payload = response?.data;
+
+  if (Array.isArray(payload)) return payload;
+  if (Array.isArray(payload?.[key])) return payload[key];
+  if (Array.isArray(payload?.data)) return payload.data;
+  if (Array.isArray(payload?.data?.[key])) return payload.data[key];
+  if (Array.isArray(payload?.results)) return payload.results;
+
+  return [];
+};
+
 // Notice APIs
 export const getNotices = () => api.get('/notices');
 export const getNoticeById = (id) => api.get(`/notices/${id}`);
