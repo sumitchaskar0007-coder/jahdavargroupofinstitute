@@ -14,7 +14,6 @@ export default function Contact() {
   const [success, setSuccess] = useState(false)
 
   async function onSubmit(data) {
-    console.log("MCA Enquiry Data:", data)
     await new Promise((r) => setTimeout(r, 800))
     setSuccess(true)
     reset()

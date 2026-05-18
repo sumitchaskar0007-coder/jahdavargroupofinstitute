@@ -262,7 +262,6 @@ export default function Admissions() {
         isOpen={showEnquiryModal}
         onClose={() => setShowEnquiryModal(false)}
         onSubmit={(data) => {
-          console.log('Form submitted:', data)
           setShowEnquiryModal(false)
         }}
       />
@@ -278,10 +277,10 @@ export default function Admissions() {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-7xl mx-auto space-y-8">
-          
+
           {/* BROCHURE TABLE SECTION - WITHOUT BROCHURE COLUMN */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-            <div 
+            <div
               className="p-6 bg-gradient-to-r from-[#0a1e3c] to-[#1e3a5f] text-white flex justify-between items-center cursor-pointer"
               onClick={() => toggleSection('brochure')}
             >
@@ -326,7 +325,7 @@ export default function Admissions() {
 
           {/* APPLICATION PROCESS SECTION - Detailed from user content */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-            <div 
+            <div
               className="p-6 bg-gradient-to-r from-[#0a1e3c] to-[#1e3a5f] text-white flex justify-between items-center cursor-pointer"
               onClick={() => toggleSection('applicationProcess')}
             >

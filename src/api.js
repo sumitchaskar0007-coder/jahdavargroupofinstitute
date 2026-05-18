@@ -77,9 +77,6 @@ export const getGalleryImages = async () => {
 export const getGalleryImageById = (id) => api.get(`/gallery/${id}`);
 
 // Create gallery item from file upload
-// frontend/src/api.js - Only the gallery-related functions need this fix
-
-// Create gallery item from file upload - FIXED field name
 export const createGalleryImage = async (data) => {
   // data should be FormData
   try {
@@ -87,8 +84,6 @@ export const createGalleryImage = async (data) => {
     const mediaType = data.get('mediaType');
     const endpoint = mediaType === 'video' ? '/gallery/video' : '/gallery/image';
     
-    // IMPORTANT: Make sure we're using 'file' as the field name
-    // The backend expects 'file' for the upload middleware
     const response = await api.post(endpoint, data, {
       headers: { 'Content-Type': 'multipart/form-data' }
     });
@@ -98,8 +93,6 @@ export const createGalleryImage = async (data) => {
     throw error;
   }
 };
-
-// The rest of the gallery functions remain the same...
 
 // Create gallery item from URL
 export const createGalleryImageFromUrl = async (data) => {
