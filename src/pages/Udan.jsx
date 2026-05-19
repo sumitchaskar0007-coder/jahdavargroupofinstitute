@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, FileClock } from "lucide-react";
 import { udanBooks } from "../data/udanBooks";
 
 const books = Object.entries(udanBooks).map(([id, book]) => ({
@@ -59,14 +59,24 @@ export default function Udan() {
                     View
                     <ArrowRight size={16} />
                   </Link>
-                  <a
-                    href={book.pdf}
-                    download={`${book.title}.pdf`}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 text-[#0a1e3c] transition hover:border-yellow-500 hover:bg-yellow-50"
-                    aria-label={`Download ${book.title}`}
-                  >
-                    <Download size={18} />
-                  </a>
+                  {book.pdf ? (
+                    <a
+                      href={book.pdf}
+                      download={`${book.title}.pdf`}
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 text-[#0a1e3c] transition hover:border-yellow-500 hover:bg-yellow-50"
+                      aria-label={`Download ${book.title}`}
+                    >
+                      <Download size={18} />
+                    </a>
+                  ) : (
+                    <span
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-400"
+                      aria-label={`${book.title} PDF not available`}
+                      title="PDF not available"
+                    >
+                      <FileClock size={18} />
+                    </span>
+                  )}
                 </div>
               </motion.article>
             ))}

@@ -38,5 +38,9 @@ export const udanBooks = {
     title: "Udan 8",
     cover: "/assets/books/udan.png",
     pdf: "/assets/books/Udan.pdf"
+  },
+  9: {
+    title: "Udan 9",
+    cover: "/assets/books/udan.png"
   }
 };

@@ -11,6 +11,7 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
+import { udanBooks } from "../data/udanBooks";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -144,10 +145,10 @@ export default function Header() {
     },
   ];
 
-  // ✅ UDAN Mega Menu Data - 8 Books
-  const udanItems = Array.from({ length: 8 }, (_, i) => ({
-    label: `UDAN ${i + 1}`,
-    path: `/udan/${i + 1}`,
+  // ✅ UDAN Mega Menu Data
+  const udanItems = Object.keys(udanBooks).map((id) => ({
+    label: `UDAN ${id}`,
+    path: `/udan/${id}`,
   }));
 
   // EXACT main navigation - ADMISSIONS now has NO dropdown

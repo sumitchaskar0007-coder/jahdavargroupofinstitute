@@ -52,27 +52,36 @@ export default function UdanBook() {
             <div className="flex flex-col justify-center">
               <p className="text-sm font-semibold uppercase tracking-wide text-yellow-600">Udan Book Series</p>
               <h1 className="mt-3 text-4xl font-bold text-[#0a1e3c]">{book.title}</h1>
-              <p className="mt-4 text-gray-700">Use the buttons below to download or open the PDF.</p>
+              <p className="mt-4 text-gray-700">
+                {book.pdf ? "Use the buttons below to download or open the PDF." : "This Udan book page has been created. The PDF will be added later."}
+              </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href={book.pdf}
-                  download={`${book.title}.pdf`}
-                  className="inline-flex items-center gap-2 rounded-md bg-[#0a1e3c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#12345f]"
-                >
-                  <Download size={18} />
-                  Download PDF
-                </a>
-                <a
-                  href={book.pdf}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-2 rounded-md border border-[#0a1e3c] px-5 py-3 text-sm font-semibold text-[#0a1e3c] transition hover:bg-blue-50"
-                >
+              {book.pdf ? (
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <a
+                    href={book.pdf}
+                    download={`${book.title}.pdf`}
+                    className="inline-flex items-center gap-2 rounded-md bg-[#0a1e3c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#12345f]"
+                  >
+                    <Download size={18} />
+                    Download PDF
+                  </a>
+                  <a
+                    href={book.pdf}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-2 rounded-md border border-[#0a1e3c] px-5 py-3 text-sm font-semibold text-[#0a1e3c] transition hover:bg-blue-50"
+                  >
+                    <FileText size={18} />
+                    Open PDF
+                  </a>
+                </div>
+              ) : (
+                <div className="mt-7 inline-flex w-fit items-center gap-2 rounded-md border border-gray-200 bg-gray-50 px-5 py-3 text-sm font-semibold text-gray-600">
                   <FileText size={18} />
-                  Open PDF
-                </a>
-              </div>
+                  PDF not available
+                </div>
+              )}
             </div>
           </motion.div>
         </section>
